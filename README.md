@@ -15,8 +15,20 @@ Analysis Steps
 
 Get Started
 ------------
-
-
+### Step 1: Install angr
+Create a virtual environment:
+```
+$ pip install virtualenv
+$ python -m venv env 
+```
+Activate the virtual environment:
+```
+$ source env/bin/activate
+```
+Install angr framework:
+```
+(env) $ pip install angr
+```
 ## Known Issues
 
 
