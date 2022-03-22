@@ -33,7 +33,12 @@ Now install project requirements using `requirements.txt` file:
 ```
 pip install -r requirements.txt
 ```
-
+### Step 4: Testing Executable Code Using Heap Overflow Detection Tool
+Everything is completed. Now you can test your desired code using our tool. We put some test cases from the NIST SARD benchmark vulnerable programs to this repository which you can use these test cases.
+```
+./run.py -b program -p 'void bad(char*)' -s 100 -a 1
+```
+We wish you happy testing!
 ## Known Issues
 
 
