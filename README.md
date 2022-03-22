@@ -23,7 +23,6 @@ python -m venv env
 source env/bin/activate
 ```
 ### Step 2: Cloning Files to Use Heap Overflow Detection Tool
-We are done with the dependencies - now to the main project:
 ```
 git clone https://github.com/SoftwareSecurityLab/Heap-Overflow-Detection
 cd Heap-Overflow-Detection
