@@ -15,25 +15,19 @@ Analysis Steps
 
 Get Started
 ------------
-### Step 1: Installing angr
+### Step 1: Creating Virtual Environment
 Create and activate a virtual environment:
 ```
 pip install virtualenv
 python -m venv env 
 source env/bin/activate
 ```
-Install angr framework:
-```
-pip install angr
-```
-
 ### Step 2: Cloning Files to Use Heap Overflow Detection Tool
 We are done with the dependencies - now to the main project.
 ```
 git clone https://github.com/SoftwareSecurityLab/Heap-Overflow-Detection
 cd Heap-Overflow-Detection
 ```
-
 ### Step 3: Installing Requirements
 ```
 pip install -r requirements.txt
