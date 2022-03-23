@@ -48,7 +48,7 @@ void CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_17_bad(char * activato
         ptr->fptr = printLine;
         /* POTENTIAL FLAW: data may not have enough space to hold source */
         if (activator[0] == '7' && activator[1] == '/' && activator[2] == '4'
-	    && activator[3] == '2' && activator[4] == 'a' && activator[5] == '8' && activator[75] == 'a') 
+	&& activator[3] == '2' && activator[4] == 'a' && activator[5] == '8' && activator[75] == 'a') 
         {
             strcpy(data, activator);
         }
