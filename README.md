@@ -36,11 +36,11 @@ Running The Tests
 ------------
 Everything is completed. Now you can test your desired code using our tool. We put some test cases from the NIST SARD benchmark vulnerable programs to this repository which you can use these test cases.
 ### Options
--h or --help HELP
--b or --binary BINARY [The Name of Binary File You Want to Analyze]
--p or --prototype PROTOTYPE [The Prototype of Test Unit You Want to Analyze]
--s or --size SIZE [The Size of Test Unit Arguments]
--a or --args ARGS [The Indexes of Argv Passed to The Test Unit As Function Arguments]
+* -h or --help HELP
+* -b or --binary BINARY [The Name of Binary File You Want to Analyze]
+* -p or --prototype PROTOTYPE [The Prototype of Test Unit You Want to Analyze]
+* -s or --size SIZE [The Size of Test Unit Arguments]
+* -a or --args ARGS [The Indexes of Argv Passed to The Test Unit As Function Arguments]
 ### Testing Executable Code Using Heap Overflow Detection Tool
 ```
 ./run.py -b program
