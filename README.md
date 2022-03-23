@@ -64,6 +64,9 @@ We need two arguments with the maximum length of 100 as the inputs of argv, whic
 ./run.py -b program -p 'void authentication(char*,char*)' -s 100,100 -a 1,2
 ```
 We wish you happy testing!😄
+Known issues
+------------
+It may you get the message "node i is not satisfiable" since the detection tool can not generate an appropriate input data if symbolic buffer has not had enough space to hold the generated input.
 ## Authors
 * **Ali Kamali** - [alikmli](https://github.com/alikmli)
 * **Sara Baradaran** - [SaraBaradaran](https://github.com/SaraBaradaran)
@@ -74,3 +77,5 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](https:
 Notes
 ------------
 We have tested our project on Ubuntu 18.04.1 LTS.
+
+https://github.com/SoftwareSecurityLab/Heap-Overflow-Detection/blob/main/Project-Files/source/config.py
