@@ -41,7 +41,7 @@ void CWE122_Heap_Based_Buffer_Overflow__c_dest_char_cat_01_bad(char * activator)
         ptr->fptr = printLine;
         /* POTENTIAL FLAW: Possible buffer overflow if source is larger than sizeof(data)-strlen(data) */
         if (activator[0] == '7' && activator[1] == '/' && activator[2] == '4'
-		&& activator[3] == '2' && activator[4] == 'a' && activator[5] == '8' && activator[75] == 'a') 
+	&& activator[3] == '2' && activator[4] == 'a' && activator[5] == '8' && activator[75] == 'a') 
         {
             strcat(data, activator);
         }
