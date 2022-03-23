@@ -67,7 +67,7 @@ We wish you happy testing!😄
 
 Known Issues
 ------------
-It may you get the message "node i is not satisfiable" since the detection tool can not generate appropriate input data if the symbolic buffer has not had enough space to hold the generated input. In this situation, you have to increase the value of the parameters in the [`config.py`](https://github.com/SoftwareSecurityLab/Heap-Overflow-Detection/blob/main/Project-Files/source/config.py) file.
+It may you get the message "node i is not satisfiable" since the detection tool can not generate appropriate input data if the symbolic buffer has not enough space to hold the generated input. In this situation, you have to increase the value of parameters in the [`config.py`](https://github.com/SoftwareSecurityLab/Heap-Overflow-Detection/blob/main/Project-Files/source/config.py) file.
 ## Authors
 * **Ali Kamali** - [alikmli](https://github.com/alikmli)
 * **Sara Baradaran** - [SaraBaradaran](https://github.com/SaraBaradaran)
