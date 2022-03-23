@@ -19,7 +19,7 @@ Get Started
 Create and activate a virtual environment:
 ```
 pip install virtualenv
-python -m venv env 
+virtualenv -p /usr/bin/python3 env
 source env/bin/activate
 ```
 ### Step 2: Cloning Files to Use Heap Overflow Detection Tool
