@@ -49,7 +49,7 @@ void CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memcpy_34_bad(char * activa
             ptr->fptr = printLine;
             /* POTENTIAL FLAW: Possible buffer overflow if data < 100 */
             if (activator[0] == '7' && activator[1] == '/' && activator[2] == '4'
-         	&& activator[3] == '2' && activator[4] == 'a' && activator[5] == '8' && activator[75] == 'a') 
+            && activator[3] == '2' && activator[4] == 'a' && activator[5] == '8' && activator[75] == 'a') 
             {
                 memcpy(data, source, 100*sizeof(int));
             }
