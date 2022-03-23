@@ -13,7 +13,7 @@ Analysis Steps
 - Python3
 - angr Framework ([Installation](https://angr.io))
 
-Get Started
+Getting Started
 ------------
 ### Step 1: Creating Virtual Environment
 Create and activate a virtual environment:
@@ -53,10 +53,15 @@ You can see possibly vulnerable units in binary program which are need to be ana
 gcc ./samples/program.c -o program
 ./run.py -b program
 ```
-For example you want to analyze the function "signup" as a vulnerable unit:<\br>
-We need two arguments with maximum length 100 as the inputs of scanf function which activate the possible vulnerabilities in "signup" unit, so we use `-s 100,100` for the sizes option.
+For example you want to analyze the function "signup" as a vulnerable unit:<br />
+We need two arguments with the maximum length of 100 as the inputs of scanf function, which activate the possible vulnerabilities in the "signup" unit, so we use `-s 100,100` for the sizes option.
 ```
 ./run.py -b program -p 'void signup(char*,char*)' -s 100,100
+```
+if you want to analyze the function "authentication" as a vulnerable unit:<br />
+We need two arguments with the maximum length of 100 as the inputs of argv, which activate the possible vulnerabilities in the "authentication" unit, so we use `-s 100,100` for the sizes option and also since the argv[1] and argv[2] have been passed to the the test unit, we use `-a 1,2` for the args option.
+```
+./run.py -b program -p 'void authentication(char*,char*)' -s 100,100 -a 1,2
 ```
 We wish you happy testing!😄
 ## Authors
@@ -66,4 +71,6 @@ We wish you happy testing!😄
 ## License
 This project is licensed under the Apache License 2.0 - see the [LICENSE.md](LICENSE.md) file for details
 
-
+Notes
+------------
+We have tested our project on Ubuntu 18.04.1 LTS.
