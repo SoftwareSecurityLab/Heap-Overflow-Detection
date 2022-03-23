@@ -18,7 +18,7 @@ Get Started
 ### Step 1: Creating Virtual Environment
 Create and activate a virtual environment:
 ```
-pip install virtualenv
+sudo apt-get install virtualenv
 virtualenv -p /usr/bin/python3 env
 source env/bin/activate
 ```
@@ -38,6 +38,11 @@ Everything is completed. Now you can test your desired code using our tool. We p
 ./run.py -b program -p 'void bad(char*)' -s 100 -a 1
 ```
 We wish you happy testing!
-## Known Issues
+## Authors
+* **Ali Kamali** - [alikmli](https://github.com/alikmli)
+* **Sara Baradaran** - [SaraBaradaran](https://github.com/SaraBaradaran)
+* **Mahdi Heidari** - [mheidari98](https://github.com/mheidari98/)
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 
