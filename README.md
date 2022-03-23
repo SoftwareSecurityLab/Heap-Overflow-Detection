@@ -46,6 +46,8 @@ Everything is completed. Now you can test your desired code using our tool. We p
 ### Testing Executable Code Using Heap Overflow Detection Tool
 You can see possibly vulnerable units in binary program which are need to be analyzed:
 ```
+cd Project-Files
+chmod +x run.py
 ./run.py -b program
 ```
 We wish you happy testing!😄
