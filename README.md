@@ -66,7 +66,7 @@ We need two arguments with the maximum length of 100 as the inputs of argv, whic
 We wish you happy testing!😄
 Known issues
 ------------
-It may you get the message "node i is not satisfiable" since the detection tool can not generate an appropriate input data if symbolic buffer has not had enough space to hold the generated input.
+It may you get the message "node i is not satisfiable" since the detection tool can not generate an appropriate input data if symbolic buffer has not had enough space to hold the generated input.In this situation, you have to increase the value of the parameters in the [`config.py`](https://github.com/SoftwareSecurityLab/Heap-Overflow-Detection/Project-Files/source/config.py) file.
 ## Authors
 * **Ali Kamali** - [alikmli](https://github.com/alikmli)
 * **Sara Baradaran** - [SaraBaradaran](https://github.com/SaraBaradaran)
