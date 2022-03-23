@@ -46,7 +46,7 @@ You can see possibly vulnerable units in binary program which are need to be ana
 ```
 ./run.py -b program
 ```
-We wish you happy testing!
+We wish you happy testing!😄
 ## Authors
 * **Ali Kamali** - [alikmli](https://github.com/alikmli)
 * **Sara Baradaran** - [SaraBaradaran](https://github.com/SaraBaradaran)
