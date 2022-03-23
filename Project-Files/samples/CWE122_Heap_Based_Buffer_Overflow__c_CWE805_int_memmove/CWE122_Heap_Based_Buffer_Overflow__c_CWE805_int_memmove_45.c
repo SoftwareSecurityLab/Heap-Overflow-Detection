@@ -55,7 +55,7 @@ void CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_45_bad(char * activ
     if (ptr == NULL) {exit(-1);}
     CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_45_badData = data;
     ptr->fptr = printLine;    
-	badSink(activator);
+    badSink(activator);
     ptr->fptr("That's OK!"); 
     free(ptr);
 }
@@ -90,7 +90,7 @@ static void goodG2B()
     if (ptr == NULL) {exit(-1);}
     CWE122_Heap_Based_Buffer_Overflow__c_CWE805_int_memmove_45_goodG2BData = data;
     ptr->fptr = printLine;    
-	goodG2BSink();
+    goodG2BSink();
     ptr->fptr("That's OK!"); 
     free(ptr);
 }
