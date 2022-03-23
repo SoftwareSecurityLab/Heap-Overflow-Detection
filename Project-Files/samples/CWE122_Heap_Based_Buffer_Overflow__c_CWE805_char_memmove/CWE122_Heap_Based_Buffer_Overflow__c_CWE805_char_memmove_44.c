@@ -28,14 +28,13 @@ struct fp
 static void badSink(char * data, char * activator)
 {
     {
-		/* POTENTIAL FLAW: Possible buffer overflow if source is larger than data */
-		if (activator[0] == '7' && activator[1] == '/' && activator[2] == '4'
-		&& activator[3] == '2' && activator[4] == 'a' && activator[5] == '8' && activator[75] == 'a') 
-		{
-			memmove(data, activator, strlen(activator)*sizeof(char));
-		}
-		printLine(data);
-		free(data);
+	/* POTENTIAL FLAW: Possible buffer overflow if source is larger than data */
+	if (activator[0] == '7' && activator[1] == '/' && activator[2] == '4'
+	&& activator[3] == '2' && activator[4] == 'a' && activator[5] == '8' && activator[75] == 'a') 
+	{
+	    memmove(data, activator, strlen(activator)*sizeof(char));
+	}
+	free(data);
     }
 }
 
@@ -68,11 +67,10 @@ void CWE122_Heap_Based_Buffer_Overflow__c_CWE805_char_memmove_44_bad(char * acti
 static void goodG2BSink(char * data, char * source)
 {
     {
-		/* POTENTIAL FLAW: Possible buffer overflow if source is larger than data */
-		memmove(data, source, 100*sizeof(char));
-		data[100-1] = '\0'; /* Ensure the destination buffer is null terminated */
-		printLine(data);
-		free(data);
+	/* POTENTIAL FLAW: Possible buffer overflow if source is larger than data */
+	memmove(data, source, 100*sizeof(char));
+	data[100-1] = '\0'; /* Ensure the destination buffer is null terminated */
+	free(data);
     }
 }
 
