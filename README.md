@@ -78,5 +78,3 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](https:
 Notes
 ------------
 We have tested our project on Ubuntu 18.04.1 LTS.
-
-https://github.com/SoftwareSecurityLab/Heap-Overflow-Detection/blob/main/Project-Files/source/config.py
