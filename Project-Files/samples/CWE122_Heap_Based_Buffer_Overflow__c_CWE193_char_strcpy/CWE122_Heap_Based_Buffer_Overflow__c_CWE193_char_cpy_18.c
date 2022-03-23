@@ -46,7 +46,7 @@ source:
         ptr->fptr = printLine;
         /* POTENTIAL FLAW: data may not have enough space to hold source */
         if (activator[0] == '7' && activator[1] == '/' && activator[2] == '4'
-	    && activator[3] == '2' && activator[4] == 'a' && activator[5] == '8' && activator[75] == 'a') 
+	&& activator[3] == '2' && activator[4] == 'a' && activator[5] == '8' && activator[75] == 'a') 
         {
             strcpy(data, activator);
         }
