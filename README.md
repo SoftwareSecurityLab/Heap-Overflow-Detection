@@ -25,7 +25,7 @@ source env/bin/activate
 ### Step 2: Cloning Files to Use Heap Overflow Detection Tool
 ```
 git clone https://github.com/SoftwareSecurityLab/Heap-Overflow-Detection
-cd Heap-Overflow-Detection/
+cd Heap-Overflow-Detection
 ```
 ### Step 3: Installing Requirements
 Now install project requirements using `requirements.txt` file:
