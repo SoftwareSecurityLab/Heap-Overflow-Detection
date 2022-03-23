@@ -44,11 +44,19 @@ Everything is completed. Now you can test your desired code using our tool. We p
 -a or --args        ARGS         [The Indexes of Argv Passed to The Test Unit As Function Arguments]
 ```
 ### Testing Executable Code Using Heap Overflow Detection Tool
-You can see possibly vulnerable units in binary program which are need to be analyzed:
 ```
 cd Project-Files
 chmod +x run.py
+```
+You can see possibly vulnerable units in binary program which are need to be analyzed:
+```
+gcc ./samples/program.c -o program
 ./run.py -b program
+```
+For example you want to analyze the function "signup" as a vulnerable unit:<\br>
+We need two arguments with maximum length 100 as the inputs of scanf function which activate the possible vulnerabilities in "signup" unit, so we use `-s 100,100` for the sizes option.
+```
+./run.py -b program -p 'void signup(char*,char*)' -s 100,100
 ```
 We wish you happy testing!😄
 ## Authors
