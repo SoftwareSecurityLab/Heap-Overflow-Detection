@@ -36,9 +36,8 @@ static void badSink(char * activator)
         if (activator[0] == '7' && activator[1] == '/' && activator[2] == '4'
     	&& activator[3] == '2' && activator[4] == 'a' && activator[5] == '8' && activator[75] == 'a') 
         {
-		    memcpy(data, activator, strlen(activator)*sizeof(char));
+	    memcpy(data, activator, strlen(activator)*sizeof(char));
         }
-        printLine(data);
         free(data);
     }
 }
@@ -74,7 +73,6 @@ static void goodG2BSink(char * source)
         /* POTENTIAL FLAW: Possible buffer overflow if source is larger than data */
         memcpy(data, source, 100*sizeof(char));
         data[100-1] = '\0'; /* Ensure the destination buffer is null terminated */
-        printLine(data);
         free(data);
     }
 }
