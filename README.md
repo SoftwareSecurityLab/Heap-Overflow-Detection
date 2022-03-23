@@ -42,6 +42,7 @@ Everything is completed. Now you can test your desired code using our tool. We p
 * -s or --size SIZE [The Size of Test Unit Arguments]
 * -a or --args ARGS [The Indexes of Argv Passed to The Test Unit As Function Arguments]
 ### Testing Executable Code Using Heap Overflow Detection Tool
+You can see possibly vulnerable units in binary program which are need to be analyzed:
 ```
 ./run.py -b program
 ```
