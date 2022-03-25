@@ -61,7 +61,7 @@ class VulAnalyzer(angr.Analysis):
         malloc_boundry=self.getMallocsBoundries()
         argStatus=self._prototypes[self.unit]
         wr_points=self._getWritePointAt(self.unit) 
-        reportBlack('-'*4+'| 1.{}','Extracting Constraint Tree ')
+        reportBlack('[1] Extracting Constraint Tree')
         self._tree.sefValsp(wr_points)
         self._tree.setMallocBoundry(malloc_boundry)
         mc=MCSimulation('NFACTOR_MC.cfg',nfactor=True)
@@ -87,7 +87,7 @@ class VulAnalyzer(angr.Analysis):
         
 
         
-        reportBlack('-'*4+'| 2.{}','Applying Cover Algorithm ')
+        reportBlack('[2] Applying Cover Algorithm')
         coverstartTime=time.time()
         self.cover=Cover(mc,self.project,self._cfgAnlyzer,self._tree,unit_func,unitArgsStatus=argStatus,mallocArgSz=mallocArgsSz)
         result=self.cover.cover(1,pointer_indexes=pointer_idx,args_index=args_index)
