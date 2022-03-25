@@ -79,3 +79,9 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](https:
 Notes
 ------------
 We have tested our project on Ubuntu 18.04.1 LTS.
+
+<div align="center">
+  <a href="https://github.com/SoftwareSecurityLab/Heap-Overflow-Detection">
+    <img src="CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_01_bad.png" alt="CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_01_bad" width="1100">
+  </a>
+</div>
