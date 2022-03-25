@@ -397,7 +397,7 @@ class Cover:
             if solver.satisfiable():
                 for gen_values in solver_gen_vals:
                     sgenval=list(gen_values).copy()
-                    print([castTO(vr,sg,cast_to=bytes) for vr, sg in zip(self.tree._allvars,sgenval)] )
+                    # print([castTO(vr,sg,cast_to=bytes) for vr, sg in zip(self.tree._allvars,sgenval)] )
                     #import pdb; pdb.set_trace()
                     tmp_res=[]
                     for var in self.tree._allvars: 
