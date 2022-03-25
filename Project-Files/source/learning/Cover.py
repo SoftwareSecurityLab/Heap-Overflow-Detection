@@ -397,6 +397,8 @@ class Cover:
             if solver.satisfiable():
                 for gen_values in solver_gen_vals:
                     sgenval=list(gen_values).copy()
+                    print([castTO(vr,sg,cast_to=bytes) for vr, sg in zip(self.tree._allvars,sgenval)] )
+                    #import pdb; pdb.set_trace()
                     tmp_res=[]
                     for var in self.tree._allvars: 
                         var_name=list(var.variables)[0]
@@ -477,28 +479,40 @@ class Cover:
             else:
                 self._unsats.append( ('node {0} is not satisfiable ... '.format(node_index),node_index) )
         
-	#shouldwrite = [castTO(vr,sg,cast_to=bytes) for vr, sg in zip(self.tree._allvars,sgenval)] 
-	#print("shouldwrite = ", shouldwrite)
-	#for jj, shwr in enumerate(shouldwrite):
-	#for i, byte in enumerate(reversed(shwr)):
-	#    if 0x20<byte and byte <= 0x7e :
-	#	index = len(shwr)-i
-	#	break    
-	#shouldwrite[jj]= re.sub(b"[\x00|\x20]", b"z", shwr[:index])
-	#shouldwrite = b' '.join(shouldwrite)
-	#Path("./Inputs").mkdir(parents=True, exist_ok=True)
-	#ifile = open(f"./Inputs/in{node_index}.bin", "wb") 
-	#ifile.write(shouldwrite)
-	#ifile.close()
+        #shouldwrite = [castTO(vr,sg,cast_to=bytes) for vr, sg in zip(self.tree._allvars,sgenval)] 
+        #print("shouldwrite = ", shouldwrite)
+        #for jj, shwr in enumerate(shouldwrite):
+        #for i, byte in enumerate(reversed(shwr)):
+        #    if 0x20<byte and byte <= 0x7e :
+        #	index = len(shwr)-i
+        #	break    
+        #shouldwrite[jj]= re.sub(b"[\x00|\x20]", b"z", shwr[:index])
+        #shouldwrite = b' '.join(shouldwrite)
+        #Path("./Inputs").mkdir(parents=True, exist_ok=True)
+        #ifile = open(f"./Inputs/in{node_index}.bin", "wb") 
+        #ifile.write(shouldwrite)
+        #ifile.close()
         #print(result)
+        #import pdb; pdb.set_trace()
         return result
     
+    def _simpleReplace(self,str_val, pattern):
+        count=str_val.count(pattern)
+        while count > 0:
+            str_val=str_val.replace(pattern,'S',1)
+            count=count-1
+        return str_val
     
     def _strRandomReplace(self,str_val):
-        count=str_val.count('\ufffd')
-        while count > 0:
-            str_val=str_val.replace('\ufffd',self._mc.getGaussianSample(-1,tp='char'),1)
-            count=count-1
+        str_val = re.sub("[\s|\ufffd|\x00]", "z", str_val)
+        # str_val=self._simpleReplace(str_val, '\ufffd')
+        # str_val=self._simpleReplace(str_val, '\x00')
+        # str_val=self._simpleReplace(str_val, '\t')
+        # str_val=self._simpleReplace(str_val, '\n')
+        # str_val=self._simpleReplace(str_val, '\x0b')
+        # str_val=self._simpleReplace(str_val, '\x0c')
+        # str_val=self._simpleReplace(str_val, '\r')
+        # str_val=self._simpleReplace(str_val, ' ')
         return str_val
         
     def _generateInBoundvalues(self,var_name,var_type,bounds,n):
