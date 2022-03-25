@@ -515,7 +515,6 @@ class _VTree(angr.Analysis):
     def setUpVulConstraints(self,curr_wfCall_vb,curr_wfCall,rhs,hist_call,iswchar=False):
         if curr_wfCall in self._func_wr_sites.keys():
             props=self._func_wr_sites[curr_wfCall]
-            print("-------|", props)
             if props[0] == 'strcpy':
                 return self._getVulConstraintsForStrcpy(curr_wfCall_vb,props,rhs,hist_call)
             if props[0] == 'strcat':
