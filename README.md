@@ -64,7 +64,11 @@ We need two arguments with the maximum length of 100 as the inputs of argv, whic
 ./run.py -b program -p 'void authentication(char*,char*)' -s 100,100 -a 1,2
 ```
 We wish you happy testing!😄
-
+<div align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
+</div>
 Known Issues
 ------------
 It may you get the message "node i is not satisfiable" since the detection tool can not generate appropriate input data if the symbolic buffer has not enough space to hold the generated input. In this situation, you have to increase the value of parameters in the [`config.py`](https://github.com/SoftwareSecurityLab/Heap-Overflow-Detection/blob/main/Project-Files/source/config.py) file.
