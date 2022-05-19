@@ -42,10 +42,11 @@ Everything is completed. Now you can test your desired code using our tool. We p
 -p or --prototype   PROTOTYPE    [The Prototype of Test Unit You Want to Analyze]
 -s or --sizes       SIZES        [The Size of Test Unit Arguments]
 -a or --args        ARGS         [The Indexes of Argv Passed to The Test Unit As Function Arguments]
+-S or --solo        SOLO         [The Solo Mode Avoids Executing Nested Functions in Unit Symbolically]
 ```
 ### Testing Executable Code Using Heap Overflow Detection Tool
 ```
-cd Project-Files
+cd Project_Files
 chmod +x run.py
 ```
 You can see possibly vulnerable units in binary program which are need to be analyzed:
@@ -67,7 +68,7 @@ We wish you happy testing!😄
 
 Known Issues
 ------------
-It may you get the message "node i is not satisfiable" since the detection tool can not generate appropriate input data if the symbolic buffer has not enough space to hold the generated input. In this situation, you have to increase the value of parameters in the [`config.py`](https://github.com/SoftwareSecurityLab/Heap-Overflow-Detection/blob/main/Project-Files/source/config.py) file.
+It may you get the message "node i is not satisfiable" since the detection tool can not generate appropriate input data if the symbolic buffer has not enough space to hold the generated input. In this situation, you have to increase the value of parameters in the [`config.py`](https://github.com/SoftwareSecurityLab/Heap-Overflow-Detection/blob/main/Project_Files/source/config.py) file.
 ## Authors
 * **Maryam Mouzarani** - [maryam-mouzarani](https://github.com/maryam-mouzarani)
 * **Ali Kamali** - [alikmli](https://github.com/alikmli)
