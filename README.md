@@ -38,11 +38,11 @@ Everything is completed. Now you can test your desired code using our tool. We p
 ### Options
 ```
 -h or --help        HELP
--b or --binary      BINARY       [The Name of Binary File You Want to Analyze]
--p or --prototype   PROTOTYPE    [The Prototype of Test Unit You Want to Analyze]
--s or --sizes       SIZES        [The Size of Test Unit Arguments]
--a or --args        ARGS         [The Indexes of Argv Passed to The Test Unit As Function Arguments]
--S or --solo        SOLO         [The Solo Mode Avoids Executing Nested Functions in Unit Symbolically]
+-b or --binary      BINARY     [The Name of Binary File You Want to Analyze]
+-p or --prototype   PROTOTYPE  [The Prototype of Test Unit You Want to Analyze]
+-s or --sizes       SIZES      [The Size of Test Unit Arguments]
+-a or --args        ARGS       [The Indexes of Argv Passed to The Test Unit As Function Arguments]
+-S or --solo        SOLO       [The Solo Mode Avoids Executing Nested Functions in Unit Symbolically]
 ```
 ### Testing Executable Code Using Heap Overflow Detection Tool
 ```
