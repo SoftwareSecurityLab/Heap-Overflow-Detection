@@ -25,4 +25,4 @@ It may you get the error:
 
 <i> PermissionError: [Errno 13] Permission denied: '~/Heap-Overflow-Detection/Project_Files/source/learning/./tar3/source/tar3/tar3' </i>
 
-you can fix it by granting the execution permision to [`tar3`](https://github.com/SoftwareSecurityLab/Heap-Overflow-Detection/blob/main/Project_Files/source/learning/tar3/source/tar3/tar3) file.
+You can fix it by granting the execution permission to [`tar3`](https://github.com/SoftwareSecurityLab/Heap-Overflow-Detection/blob/main/Project_Files/source/learning/tar3/source/tar3/tar3) file.
