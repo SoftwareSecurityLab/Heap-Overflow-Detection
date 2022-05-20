@@ -57,7 +57,7 @@ We need two arguments with the maximum length of 100 as the inputs of "scanf" fu
 ```
 ./run.py -b program -p 'void signup(char*,char*)' -s 100,100 --solo
 ```
-if you want to analyze the function "authentication" as a vulnerable unit:<br />
+If you want to analyze the function "authentication" as a vulnerable unit:<br />
 We need two arguments with the maximum length of 100 as the inputs of argv, which activate the possible vulnerabilities in the "authentication" unit, so we use `-s 100,100` for the sizes option and also since the argv[1] and argv[2] have been passed to the the test unit, we use `-a 1,2` for the args option.
 ```
 ./run.py -b program -p 'void authentication(char*,char*)' -s 100,100 -a 1,2 --solo
