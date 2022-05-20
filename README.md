@@ -46,23 +46,21 @@ Everything is completed. Now you can test your desired code using our tool. We p
 ```
 ### Testing Executable Code Using Heap Overflow Detection Tool
 ```
-cd Project_Files
-chmod +x run.py
+cd Project_Files; chmod +x run.py
 ```
 You can see possibly vulnerable units in binary program which are need to be analyzed:
 ```
-gcc ./samples/program.c -o program
-./run.py -b program
+gcc ./samples/program.c -o program; ./run.py -b program
 ```
 For example you want to analyze the function "signup" as a vulnerable unit:<br />
 We need two arguments with the maximum length of 100 as the inputs of "scanf" function, which activate the possible vulnerabilities in the "signup" unit, so we use `-s 100,100` for the sizes option.
 ```
-./run.py -b program -p 'void signup(char*,char*)' -s 100,100
+./run.py -b program -p 'void signup(char*,char*)' -s 100,100 --solo
 ```
 if you want to analyze the function "authentication" as a vulnerable unit:<br />
 We need two arguments with the maximum length of 100 as the inputs of argv, which activate the possible vulnerabilities in the "authentication" unit, so we use `-s 100,100` for the sizes option and also since the argv[1] and argv[2] have been passed to the the test unit, we use `-a 1,2` for the args option.
 ```
-./run.py -b program -p 'void authentication(char*,char*)' -s 100,100 -a 1,2
+./run.py -b program -p 'void authentication(char*,char*)' -s 100,100 -a 1,2 --solo
 ```
 We wish you happy testing!😄
 
