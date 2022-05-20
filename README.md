@@ -34,7 +34,7 @@ pip install -r requirements.txt
 ```
 Running The Tests
 ------------
-Everything is completed. Now you can test your desired code using our tool. We put some test cases from the [NIST SARD](https://samate.nist.gov/SRD/) benchmark vulnerable programs to this repository which you can use these test cases.
+Everything is completed. Now you can test your desired code using our tool. We put some test cases from the [NIST SARD](https://samate.nist.gov/SRD/) benchmark vulnerable programs in this repository which you can use these test cases.
 ### Options
 ```
 -h or --help        HELP
@@ -52,13 +52,13 @@ You can see possibly vulnerable units in binary program which are need to be ana
 ```
 gcc ./samples/program.c -o program; ./run.py -b program
 ```
-For example you want to analyze the function "signup" as a vulnerable unit:<br />
+For example, you want to analyze the function "signup" as a vulnerable unit:<br />
 We need two arguments with the maximum length of 100 as the inputs of "scanf" function, which activate the possible vulnerabilities in the "signup" unit, so we use `-s 100,100` for the sizes option.
 ```
 ./run.py -b program -p 'void signup(char*,char*)' -s 100,100 --solo
 ```
 If you want to analyze the function "authentication" as a vulnerable unit:<br />
-We need two arguments with the maximum length of 100 as the inputs of argv, which activate the possible vulnerabilities in the "authentication" unit, so we use `-s 100,100` for the sizes option and also since the argv[1] and argv[2] have been passed to the the test unit, we use `-a 1,2` for the args option.
+We need two arguments with the maximum length of 100 as the inputs of argv, which activate the possible vulnerabilities in the "authentication" unit, so we use `-s 100,100` for the sizes option and also since the argv[1] and argv[2] have been passed to the test unit, we use `-a 1,2` for the args option.
 ```
 ./run.py -b program -p 'void authentication(char*,char*)' -s 100,100 -a 1,2 --solo
 ```
@@ -66,7 +66,8 @@ We wish you happy testing!😄
 
 Known Issues
 ------------
-It may you get the message "node i is not satisfiable" since the detection tool can not generate appropriate input data if the symbolic buffer has not enough space to hold the generated input. In this situation, you have to increase the value of parameters in the [`config.py`](https://github.com/SoftwareSecurityLab/Heap-Overflow-Detection/blob/main/Project_Files/source/config.py) file.
+You may get the message "node i is not satisfiable" since the detection tool can not generate appropriate input data if the symbolic buffer does not have enough space to hold the generated input. In this situation, you have to increase the value of parameters in the [`config.py`](https://github.com/SoftwareSecurityLab/Heap-Overflow-Detection/blob/main/Project_Files/source/config.py) file.
+
 ## Authors
 * **Maryam Mouzarani** - [maryam-mouzarani](https://github.com/maryam-mouzarani)
 * **Ali Kamali** - [alikmli](https://github.com/alikmli)
