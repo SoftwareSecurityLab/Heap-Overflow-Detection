@@ -10,7 +10,7 @@ import sys, os
 sys.setrecursionlimit(2000)
 
 
-for i in range(43, 91):
+for i in range(1, 91):
     print('===================')
     print("| Program No.: " + str(i))
     print('===================')
