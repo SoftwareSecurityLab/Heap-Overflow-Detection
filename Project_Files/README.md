@@ -6,7 +6,7 @@ Running The Tests
 ------------
 Note that our implemented tool uses x64 binary code for analyzing C programs. Compile benchmark programs using below command:
 ```
-cd samples; chmod +x executable_generator.sh; ./executable_generator.sh
+cd samples; chmod +x executable.sh; ./executable.sh
 ```
 Run shellscript:
 ```
