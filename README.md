@@ -34,7 +34,7 @@ Now install project requirements using `requirements.txt` file:
 ```
 pip install -r requirements.txt
 ```
-Running The Tests
+Running Tests
 ------------
 Everything is completed. Now you can test your desired code using our tool. We put some test cases from the [NIST SARD](https://samate.nist.gov/SRD/) benchmark vulnerable programs in this repository which you can use these test cases.
 ### Options
